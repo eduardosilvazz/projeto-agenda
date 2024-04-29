@@ -312,3 +312,8 @@
     filter: brightness(80%);
     box-shadow: 0 0 5px var(--link-dark-color);
   }
+  
+  .faker-data {
+    text-align: center; /* ou left, right, conforme necessário */
+    /* Adicione outros estilos conforme necessário */
+}
