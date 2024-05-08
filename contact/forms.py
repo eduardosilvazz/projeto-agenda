@@ -18,6 +18,7 @@ class ContactForm(forms.ModelForm):
         model = models.Contact
         fields = (
             'first_name', 'last_name', 'phone',
+            'category', 'description', 'email',
         )
         #widgets = {
             #'first_name': forms.TextInput(
