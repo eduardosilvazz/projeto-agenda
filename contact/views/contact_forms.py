@@ -38,7 +38,7 @@ def update(request, contact_id):
     contact = get_object_or_404(
         Contact, pk=contact_id, show=True
     )
-    form_action = reverse('contact:update', args=(contact_id,))
+    form_action = reverse('contact:update', args=(contact_id))
     
     if request.method == 'POST':
         form = ContactForm(request.POST, request.FILES, instance=contact)
