@@ -8,6 +8,7 @@ from . import models
 class ContactForm(forms.ModelForm):
 
     picture = forms.ImageField(
+        required = False,
         widget=forms.FileInput(
             attrs={
                 'accept': 'image/*',
@@ -141,6 +142,8 @@ class RegisterUpdateForm(forms.ModelForm):
         if commit:
             user.save()
 
+        return user
+    
     def clean(self):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
